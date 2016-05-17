@@ -2,10 +2,13 @@
 	'use strict';
 	angular.module('appdirect',
 		[
-			'ui.router'
+			'ui.router',
+			'ngSanitize'
 		]
 	);
 })();
+
+require('./components');
 
 require('./app.controller.js');
 require('./app.services.js');

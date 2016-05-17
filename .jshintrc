@@ -14,7 +14,7 @@
   "nonew"         : false,
   "plusplus"      : false,
   "quotmark"      : "single",
-  "undef"         : true,
+  "undef"         : false,
   "unused"        : true,
   "strict"        : true,
   "maxparams"     : false,

@@ -1,0 +1,56 @@
+.tweet-container
+	border-radius: 10px
+	width: 90%
+	margin: 20px 5%
+	padding: 10px
+	text-align: left
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+
+	.user-name
+		font-weight: bold
+		opacity: 0.65
+		margin-bottom: 2px
+		a
+			color: black
+			text-decoration: none
+			&:hover
+				text-decoration: none
+
+	td.user-image
+		padding: 0 10px 0 0
+		vertical-align: top
+		img
+			border-radius: 5px
+
+	td.tweet-text
+		padding: 0 5px
+		.retweet
+			width: 18px
+			height: 15px
+			padding-top: 3px
+			display: inline-block
+			overflow: hidden
+			.icon
+				position: absolute
+				opacity: 0.65
+				background-image: url("content/images/retweet.svg")
+				background-repeat: no-repeat
+				background-size: 20px
+				background-position: 0 -2px
+				width: 20px
+				height: 20px
+				margin: 0
+
+	.tweet-footer
+		padding: 10px 5px 5px 5px
+		height: 30px
+		.tweet-date
+			float: left
+			font-size: 12px
+			opacity: 0.5
+		.tweet-link
+			float: right
+			opacity: 0.65
+			img
+				width: 15px
+				height: 15px

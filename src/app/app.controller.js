@@ -6,9 +6,9 @@
 		self.source1 = 'AppDirect';
 		self.source2 = 'laughingsquid';
 		self.source3 = 'techcrunch';
-		self.source1Items = [];
-		self.source2Items = [];
-		self.source3Items = [];
+		self.source1Items;
+		self.source2Items;
+		self.source3Items;
 
 		bootstrap();
 

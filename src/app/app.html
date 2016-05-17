@@ -1,25 +1,16 @@
 <table>
   <tr>
-    <td>
-      <ul>
-        <li ng-repeat="item in ctrl.source1Items">
-          {{ item.text }}
-        </li>
-      </ul>
+    <td ng-if="ctrl.source1Items">
+      <tweet-card ng-repeat="item in ctrl.source1Items" tweet="item">
+      </tweet-card>
     </td>
-    <td>
-      <ul>
-        <li ng-repeat="item in ctrl.source2Items">
-          {{ item.text }}
-        </li>
-      </ul>
+    <td ng-if="ctrl.source2Items">
+      <tweet-card ng-repeat="item in ctrl.source2Items" tweet="item">
+      </tweet-card>
     </td>
-    <td>
-      <ul>
-        <li ng-repeat="item in ctrl.source3Items">
-          {{ item.text }}
-        </li>
-      </ul>
+    <td ng-if="ctrl.source3Items">
+      <tweet-card ng-repeat="item in ctrl.source3Items" tweet="item">
+      </tweet-card>
     </td>
   </tr>
 </table>

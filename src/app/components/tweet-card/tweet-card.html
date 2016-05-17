@@ -1,0 +1,26 @@
+<div class="tweet-container">
+  <table>
+    <tr>
+      <td class="user-image">
+        <a href="{{ ctrl.userUrl }}" target="_blank">
+          <span ng-bind-html="ctrl.profileImageTag"></span>
+        </a>
+      </td>
+      <td class="tweet-text">
+        <p class="user-name">
+          <a href="{{ ctrl.userUrl }}" target="_blank">
+            {{ ctrl.tweet.user.screen_name }}
+          </a>
+        </p>
+        <div ng-if="ctrl.isRetweeted()" class="retweet" title="Retweeted">
+          <div class="icon"></div>
+        </div>
+        <span ng-bind-html="ctrl.formattedText"></span>
+      </td>
+    </tr>
+  </table>
+  <div class="tweet-footer">
+    <label title="Created at" class="tweet-date">{{ ctrl.formattedDate }}</label>
+    <a title="Link to the tweet" class="tweet-link" href="{{ ctrl.tweetLink }}" target="_blank"><img src="content/images/link.svg" /></a>
+  </div>
+</div>
