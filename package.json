@@ -1,10 +1,9 @@
 {
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": true,
   "name": "appdirect-challenge",
-  "description": "A tutorial application for AngularJS",
-  "repository": "https://github.com/angular/angular-phonecat",
-  "license": "MIT",
+  "description": "App Direct Challenge",
+  "repository": "https://github.com/kavvak/appdirect-challenge",
   "devDependencies": {
     "bower": "^1.3.1",
     "http-server": "^0.9.0",
