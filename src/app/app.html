@@ -1,16 +1,71 @@
-<table>
-  <tr>
-    <td ng-if="ctrl.source1Items">
-      <tweet-card ng-repeat="item in ctrl.source1Items" tweet="item">
+<div class="tweets-container col-md-4 col-lg-4 col-sm-12 col-xs-12">
+  <div class="tweets col-md-4 col-lg-4 col-sm-12 col-xs-12">
+    <div class="tweets-header col-md-4 col-lg-4 col-sm-12 col-xs-12">
+      <h2>
+        <a href="https://twitter.com/{{ ctrl.getSourceName(0) }}" target="_blank">{{ ctrl.getSourceName(0) }}</a>
+        <a class="edit-icon" title="Edit" ng-click="ctrl.editSourceConfig(0)"><img src="content/images/edit.svg"/></a>
+        <span class="tweets-no">{{ ctrl.sourcesItems[0].length}} tweets</span>
+      </h2>
+    </div>
+    <div ng-if="ctrl.sourcesItems[0].length">
+      <tweet-card ng-repeat="item in ctrl.sourcesItems[0]" tweet="item">
       </tweet-card>
-    </td>
-    <td ng-if="ctrl.source2Items">
-      <tweet-card ng-repeat="item in ctrl.source2Items" tweet="item">
+    </div>
+  </div>
+</div>
+<div class="tweets-container col-md-4 col-lg-4 col-sm-12 col-xs-12">
+  <div class="tweets col-md-4 col-lg-4 col-sm-12 col-xs-12">
+    <div class="tweets-header col-md-4 col-lg-4 col-sm-12 col-xs-12">
+      <h2>
+        <a href="https://twitter.com/{{ ctrl.getSourceName(1) }}" target="_blank">{{ ctrl.getSourceName(1) }}</a>
+        <a class="edit-icon" title="Edit" ng-click="ctrl.editSourceConfig(1)"><img src="content/images/edit.svg"/></a>
+        <span class="tweets-no">{{ ctrl.sourcesItems[1].length}} tweets</span>
+      </h2>
+    </div>
+    <div ng-if="ctrl.sourcesItems[1].length">
+      <tweet-card ng-repeat="item in ctrl.sourcesItems[1]" tweet="item">
       </tweet-card>
-    </td>
-    <td ng-if="ctrl.source3Items">
-      <tweet-card ng-repeat="item in ctrl.source3Items" tweet="item">
+    </div>
+  </div>
+</div>
+<div class="tweets-container col-md-4 col-lg-4 col-sm-12 col-xs-12">
+  <div class="tweets col-md-4 col-lg-4 col-sm-12 col-xs-12">
+    <div class="tweets-header col-md-4 col-lg-4 col-sm-12 col-xs-12">
+      <h2>
+        <a href="https://twitter.com/{{ ctrl.getSourceName(2) }}" target="_blank">{{ ctrl.getSourceName(2) }}</a>
+        <a class="edit-icon" title="Edit" ng-click="ctrl.editSourceConfig(2)"><img src="content/images/edit.svg"/></a>
+        <span class="tweets-no">{{ ctrl.sourcesItems[2].length}} tweets</span>
+      </h2>
+    </div>
+    <div ng-if="ctrl.sourcesItems[2].length">
+      <tweet-card ng-repeat="item in ctrl.sourcesItems[2]" tweet="item">
       </tweet-card>
-    </td>
-  </tr>
-</table>
+    </div>
+  </div >
+</div>
+
+<div class="back-drop" ng-click="ctrl.closeEditConfig()" ng-if="ctrl.showModal"></div>
+<modal class="edit-config" ng-if="ctrl.showModal">
+  <nav>
+    <h2 class="title">Edit Configurations</h2>
+    <div class="close" ng-click="ctrl.closeEditConfig()">x</div>
+  </nav>
+  <section role="form">
+    <div class="input-container">
+      <label>Twitter user</label>
+      <input type="textbox" ng-model="ctrl.selectedSourceConfig.name" />
+    </div>
+    <div class="input-container">
+      <label>Number of Tweets to load</label>
+      <input type="textbox" ng-model="ctrl.selectedSourceConfig.count" />
+    </div>
+    <div class="input-container">
+      <label>To which column this user belongs?</label>
+      <input type="textbox" ng-model="ctrl.selectedSourceConfig.order" />
+    </div>
+  </section>
+  <footer class="footer">
+    <button class="save" ng-click="ctrl.saveSourceConfig()">Save</button>
+    <button class="cancel" ng-click="ctrl.closeEditConfig()">Cancel</button>
+  </footer>
+</modal>

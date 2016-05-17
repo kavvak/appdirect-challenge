@@ -3,7 +3,8 @@
 	angular.module('appdirect',
 		[
 			'ui.router',
-			'ngSanitize'
+			'ngSanitize',
+			'LocalStorageModule'
 		]
 	);
 })();

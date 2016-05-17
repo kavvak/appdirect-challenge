@@ -1,0 +1,149 @@
+.tweets-container
+  padding: 0
+  .tweets-header
+    position: absolute
+    height: 80px
+    margin: 0
+    top: 0
+    z-index: 100
+    h2
+      background: #fff
+      color: rgba(0,0,0,0.65)
+      font-weight: bold
+      margin: 0
+      border-top: 1px solid rgba(0,0,0,0.65)
+      padding-top: 40px
+      height: 60px
+      a.edit-icon
+        position: absolute
+      img
+        width: 20px
+        height: 20px
+        margin-bottom: 5px
+        margin-left: 5px
+        opacity: 0.35
+        cursor: pointer
+        &:hover
+          opacity: 0.65
+      .tweets-no
+        color: rgba(0,0,0,0.5)
+        font-weight: bold
+        display: block
+        font-size: 14px
+        padding-top: 5px
+      
+  .tweets
+    padding: 80px 0 0 0
+    overflow-y: auto
+    overflow-x: hidden
+
+@media (min-width: 992px)
+  .tweets-container
+    position: static
+    padding: 0
+    .tweets-header
+      position: fixed
+      h2
+        border: none
+        padding-top: 20px
+    .tweets
+      position: absolute
+      top: 0
+      bottom: 0
+
+.back-drop
+  position: fixed
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+  background: rgba(0,0,0,0.5)
+  z-index: 110
+
+modal
+  width: 50%
+  height: 50%
+  z-index: 120
+  position: fixed
+  left: 25%
+  top: 25%
+  background: #fff
+  border-radius: 10px
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+  nav
+    display: block
+    height: 70px
+    width: 100%
+    background: rgba(0,0,0,0.35)
+    color: #fff
+    border-radius: 10px 10px 0 0
+    .title
+      float: left
+      margin: 0
+      padding: 20px 15px 0 15px
+    .close
+      width: 32px
+      height: 32px
+      border-radius: 50%
+      background: #fff
+      color: #666
+      cursor: pointer
+      float: right
+      opacity: 1
+      padding-top: 4px
+      margin: 20px 10px
+      font-weight: normal
+      text-shadow: none
+
+  section
+    padding-top: 30px
+    .input-container
+      margin: 10px 5% 30px 5%
+      label, input
+        display: block
+        width: 100%
+        height: 40px
+        font-size: 16px
+        font-weight: bold
+        text-align: center
+        color: #666
+        margin: 0
+      label
+        height: 20px
+      input
+        font-size: 20px
+        border: none
+        border-bottom: 3px solid #18c
+
+  footer
+    position: absolute
+    bottom: 0
+    width: 100%
+    height: 70px
+    padding: 15px 15px 20px 15px
+    background: rgba(0,0,0,0.35)
+    color: #fff
+    border-radius: 0 0 10px 10px
+    button
+      border: none
+      border-collapse: collapse
+      width: 100px
+      height: 40px
+      font-size: 18px
+      font-weight: bold
+      border-radius: 5px
+      float: right
+      margin-left: 20px
+    .save
+      background: #18c
+      color: #fff
+    .cancel
+      background: #fff
+      color: #333
+
+@media (max-width: 992px)
+  modal
+    width: 90%
+    height: 90%
+    left: 5%
+    top: 5%

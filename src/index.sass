@@ -5,4 +5,15 @@ body
 	font-family: arial
 	margin: 0
 
+a
+  text-decoration: none
+  &:hover
+    text-decoration: none
+
+button, a, input
+	&:active, &:focus
+		outline: none
+		box-shadow: none
+
+@import "app/app.sass"
 @import "app/components/tweet-card/tweet-card.sass"

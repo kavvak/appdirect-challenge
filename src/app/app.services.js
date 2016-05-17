@@ -10,8 +10,8 @@
             method: 'GET',
             url: basetwitterUrl,
             params: {
-              screen_name: source,
-              count: 30
+              screen_name: source.name,
+              count: source.count
             }
           }).then(function successCallback(response) {
             return response.data;
