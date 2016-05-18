@@ -29,7 +29,7 @@
     "lint": "jshint src",
     "build:css": "node-sass src/index.sass > dist/index.css --output-style compact",
     "build:js": "browserify src/app/app.module.js > dist/app.js",
-    "build:html": "copyfiles -u 1 src/**/*.html dist/",
+    "build:html": "copyfiles -u 1 \"src/**/*.html\" dist",
     "build:assets": "copyfiles -u 1 src/content/**/* dist/",
     "build:clean": "npm install rimraf && npm run clean && npm install && npm run build:js && npm run build:css && npm run build:html && npm run build:assets",
     "build": "npm run build:js && npm run build:css && npm run build:html && npm run build:assets",
